@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yashwant Wardhan - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg-color: #f9f9fc;
+      --text-color: #111;
+      --accent: #4e54c8;
+      --accent2: #8f94fb;
+      --box: #fff;
+    }
+
+    body.dark {
+      --bg-color: #1e1e2f;
+      --text-color: #f0f0f0;
+      --accent: #8f94fb;
+      --accent2: #4e54c8;
+      --box: #2b2b3c;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    nav {
+      background: linear-gradient(45deg, var(--accent), var(--accent2));
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .theme-toggle {
+      background: white;
+      color: var(--accent);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-top: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .box {
+      background: var(--box);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .profile img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: var(--accent2);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--accent);
+      color: white;
+      margin-top: 4rem;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌗 Theme</button>
+  </nav>
+
+  <div class="container">
+
+    <section id="home" class="section profile">
+      <h1>Yashwant Wardhan</h1>
+      <p>Data Analyst | 4+ Years Experience | Python • SQL • Tableau • AWS</p>
+      <a class="download-btn" href="resume.pdf" target="_blank">📄 Download Resume (PDF)</a>
+      <div>
+        <img src="profile.jpeg" alt="Profile Photo">
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="box">
+        <h3>Deloitte USI – Data Analyst</h3>
+        <p><strong>2022 - Present</strong></p>
+        <p>Led audit analytics and automation for US clients. Developed dashboards, automated scripts, and AWS monitoring tools.</p>
+      </div>
+      <div class="box">
+        <h3>PwC – Senior Associate</h3>
+        <p><strong>2021 - 2022</strong></p>
+        <p>Built real-time dashboards and automation pipelines. Delivered data tools to multiple global audit teams.</p>
+      </div>
+      <div class="box">
+        <h3>Standard Chartered – Analyst</h3>
+        <p><strong>2019 - 2021</strong></p>
+        <p>Implemented NLP and anomaly detection models to enhance risk controls. Developed Power BI reports for senior stakeholders.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="box">
+        <h3>Behavioral Risk Radar Dashboard</h3>
+        <p>Created a dynamic dashboard summarizing audit feedback using positive/negative comment analysis across 1000+ services.</p>
+      </div>
+      <div class="box">
+        <h3>Date Format Sync App</h3>
+        <p>Python GUI tool to auto-match and sync columns in CSV/Excel files. Preserves original formatting while fixing date formats.</p>
+      </div>
+      <div class="box">
+        <h3>Dataiku SQL Runner Extension</h3>
+        <p>Automated SQL script execution in Dataiku from Edge browser using a Python GUI, saving time for analysts.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python, SQL, Tableau, Power BI</li>
+        <li>AWS (EC2, S3, Athena, Redshift)</li>
+        <li>Excel, VBA, Dataiku</li>
+        <li>ETL, NLP, Dashboarding</li>
+      </ul>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p>B.Tech – Computer Science Engineering</p>
+      <p>Google Data Analytics Certification</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: yashwant@example.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yashwantwardhan" target="_blank">linkedin.com/in/yashwantwardhan</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Yashwant Wardhan</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
