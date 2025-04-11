@@ -40,15 +40,18 @@
       top: 0;
       z-index: 1000;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      gap: 10px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
       transition: color 0.3s ease;
     }
 
@@ -64,7 +67,6 @@
       border-radius: 20px;
       font-weight: bold;
       cursor: pointer;
-      margin-left: 20px;
     }
 
     .container {
@@ -141,6 +143,56 @@
 
     a {
       color: var(--accent);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 0.5rem;
+      }
+
+      nav a {
+        margin: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .container {
+        padding: 1.2rem;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .profile img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .download-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .profile img {
+        width: 130px;
+        height: 130px;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .download-btn {
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
